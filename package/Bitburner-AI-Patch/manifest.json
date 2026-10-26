@@ -1,19 +1,20 @@
 {
   "gameVersion": "3.0.1",
   "source": "http://192.168.100.196:3000/asuka/bitburner-ai.git",
-  "commit": "v1.1.0",
+  "commit": "v1.2.0",
   "files": [
     {
       "path": "resources/app/bb-ai/main.cjs",
-      "sha256": "7cb4dac0d45610fa70fe02b1682d4884b5be226357833e15b11415ba9620c5a0",
+      "sha256": "55989d6d2826f2acb810d69facb38dbd371e1dbad86c6f40b7a69805da444acf",
       "originalSha256": null,
       "previousSha256": [
-        "224c0e3935bac998f99a111d72f203559ae78bc0ff3e1bcba56a9ebbf032a6d9"
+        "224c0e3935bac998f99a111d72f203559ae78bc0ff3e1bcba56a9ebbf032a6d9",
+        "7cb4dac0d45610fa70fe02b1682d4884b5be226357833e15b11415ba9620c5a0"
       ]
     },
     {
       "path": "resources/app/bb-ai/provider.cjs",
-      "sha256": "873ecdd2459ece75d3a3c86ac35286ffb3c392f5d765746fc4fbf30ff94fe8fe",
+      "sha256": "6d52801bd32e602c67dce6f02e047b9b6e9205b99c646d0ee9eac13789b871da",
       "originalSha256": null,
       "previousSha256": [
         "873ecdd2459ece75d3a3c86ac35286ffb3c392f5d765746fc4fbf30ff94fe8fe"
@@ -21,24 +22,28 @@
     },
     {
       "path": "resources/app/bb-ai/sessions.cjs",
-      "sha256": "3646602ba85810bcdc461e98c17d56fdfa30a19e0e7b24c810f470b32e9bb2c5",
+      "sha256": "a6b1d92a4e1bc9575304aaed8dc0bc9c687c4b1548eeecabbfbcce0157a815d0",
       "originalSha256": null,
-      "previousSha256": []
+      "previousSha256": [
+        "3646602ba85810bcdc461e98c17d56fdfa30a19e0e7b24c810f470b32e9bb2c5"
+      ]
     },
     {
       "path": "resources/app/dist/bb-ai/agent.js",
-      "sha256": "d223f3a994f98f95d8a3e1563783db10f8403a6c05fde2bca6683c79497a0dea",
+      "sha256": "0288c70e0da8fb3dca392496937b0ceb6b9e2cc41f5e8e62477f608188fdcc1f",
       "originalSha256": null,
       "previousSha256": [
-        "a2f59f025156dbd166df4785c9c941eaea4c2ad9dccb4bdd7f10576104aeadec"
+        "a2f59f025156dbd166df4785c9c941eaea4c2ad9dccb4bdd7f10576104aeadec",
+        "d223f3a994f98f95d8a3e1563783db10f8403a6c05fde2bca6683c79497a0dea"
       ]
     },
     {
       "path": "resources/app/dist/bb-ai/assistant.js",
-      "sha256": "29589b9712fc8a72b3a58f4174e139ba47fa8be74045749ed0f3f6a2442388ac",
+      "sha256": "1b19eb1c1d00f7132ec5bb2512b393bf1d47c4dfeceb904eb90f567866545dd5",
       "originalSha256": null,
       "previousSha256": [
-        "99c3f0ebeb82976438092522af8a4da88d42c0e556c4ea1722b73faca8cabb79"
+        "99c3f0ebeb82976438092522af8a4da88d42c0e556c4ea1722b73faca8cabb79",
+        "29589b9712fc8a72b3a58f4174e139ba47fa8be74045749ed0f3f6a2442388ac"
       ]
     },
     {

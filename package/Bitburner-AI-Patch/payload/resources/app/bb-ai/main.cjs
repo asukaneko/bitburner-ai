@@ -18,10 +18,10 @@ function register({ app, ipcMain, net, safeStorage }) {
       if (!encrypted()) throw new Error("系统暂时无法解密已保存的密钥，请重新填写。");
       apiKey = safeStorage.decryptString(Buffer.from(stored.encryptedKey, "base64"));
     }
-    return { baseUrl: stored.baseUrl || "", model: stored.model || "", apiKey };
+    return { baseUrl: stored.baseUrl || "", model: stored.model || "", contextWindow: stored.contextWindow || 128000, apiKey };
   }
   function publicConfig(config) {
-    return { baseUrl: config.baseUrl, model: config.model, hasKey: Boolean(config.apiKey), encryptedStorage: encrypted() };
+    return { baseUrl: config.baseUrl, model: config.model, contextWindow: config.contextWindow, hasKey: Boolean(config.apiKey), encryptedStorage: encrypted() };
   }
   function save(value) {
     const checked = provider.validateConfig(value);

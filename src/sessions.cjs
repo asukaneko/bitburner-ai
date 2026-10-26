@@ -44,7 +44,7 @@ function createSessionStore(directory) {
   }
   function create() {
     const date = new Date().toISOString();
-    const value = { id: randomUUID(), title: "新对话", createdAt: date, updatedAt: date, events: [], groups: [], pending: false, pendingMessage: "", draft: "" };
+    const value = { id: randomUUID(), title: "新对话", createdAt: date, updatedAt: date, events: [], groups: [], maxRounds: 200, pending: false, pendingMessage: "", draft: "" };
     atomic(file(value.id), value); active(value.id); return value;
   }
   function save(value) {
@@ -60,7 +60,9 @@ function createSessionStore(directory) {
     for (const group of value.groups) {
       if (!Array.isArray(group) || group.some(message => !message || !["user", "assistant", "tool"].includes(message.role))) throw new Error("会话上下文格式无效。");
     }
-    const stored = { id: previous.id, title, createdAt: previous.createdAt, updatedAt: new Date().toISOString(), events: value.events, groups: value.groups, pending: value.pending === true, pendingMessage: String(value.pendingMessage || "").slice(0, 12000), draft: String(value.draft || "").slice(0, 12000) };
+    const maxRounds = value.maxRounds === undefined ? (previous.maxRounds || 200) : value.maxRounds;
+    if (!Number.isSafeInteger(maxRounds) || maxRounds < 1 || maxRounds > 1000) throw new Error("每轮上限须为 1 到 1,000 之间的整数。");
+    const stored = { id: previous.id, title, createdAt: previous.createdAt, updatedAt: new Date().toISOString(), events: value.events, groups: value.groups, maxRounds, pending: value.pending === true, pendingMessage: String(value.pendingMessage || "").slice(0, 12000), draft: String(value.draft || "").slice(0, 12000) };
     atomic(file(stored.id), stored); return summary(stored);
   }
   function handle(method, value = {}) {

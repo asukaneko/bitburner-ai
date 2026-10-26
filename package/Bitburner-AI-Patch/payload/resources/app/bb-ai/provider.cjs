@@ -18,7 +18,11 @@ function validateConfig(value) {
   endpoint(baseUrl);
   const model = String(value.model || "").trim();
   if (!model || model.length > 200) throw new Error("请填写模型名称。");
-  return { baseUrl, model };
+  const contextWindow = value.contextWindow === undefined ? 128000 : value.contextWindow;
+  if (!Number.isSafeInteger(contextWindow) || contextWindow < 4096 || contextWindow > 2000000) {
+    throw new Error("上下文窗口需设置为 4,096 到 2,000,000 之间的整数 Token。");
+  }
+  return { baseUrl, model, contextWindow };
 }
 
 function cleanError(error, key) {
@@ -47,6 +51,9 @@ async function complete(config, request, fetchImpl, signal) {
   const message = data.choices?.[0]?.message;
   if (!message || (!message.content && !message.tool_calls?.length)) throw new Error("服务没有返回可用的对话内容，请检查模型与接口是否兼容。");
   const result = { role: "assistant", content: message.content || null };
+  if (Number.isSafeInteger(data.usage?.prompt_tokens) && data.usage.prompt_tokens >= 0) {
+    result.usage = { prompt_tokens: data.usage.prompt_tokens };
+  }
   if (Array.isArray(message.tool_calls) && message.tool_calls.length) {
     if (message.tool_calls.length > 12) throw new Error("单次工具调用过多，请将任务拆小。");
     result.tool_calls = message.tool_calls.map(call => {

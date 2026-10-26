@@ -1,7 +1,7 @@
 {
   "gameVersion": "3.0.1",
   "source": "http://192.168.100.196:3000/asuka/bitburner-ai.git",
-  "commit": "v1.2.0",
+  "commit": "v1.3.0",
   "files": [
     {
       "path": "resources/app/bb-ai/main.cjs",
@@ -39,11 +39,12 @@
     },
     {
       "path": "resources/app/dist/bb-ai/assistant.js",
-      "sha256": "1b19eb1c1d00f7132ec5bb2512b393bf1d47c4dfeceb904eb90f567866545dd5",
+      "sha256": "2dc5191e323723bf5351f54ced40260d30e624bc396dabac2f9b55786419360c",
       "originalSha256": null,
       "previousSha256": [
         "99c3f0ebeb82976438092522af8a4da88d42c0e556c4ea1722b73faca8cabb79",
-        "29589b9712fc8a72b3a58f4174e139ba47fa8be74045749ed0f3f6a2442388ac"
+        "29589b9712fc8a72b3a58f4174e139ba47fa8be74045749ed0f3f6a2442388ac",
+        "1b19eb1c1d00f7132ec5bb2512b393bf1d47c4dfeceb904eb90f567866545dd5"
       ]
     },
     {

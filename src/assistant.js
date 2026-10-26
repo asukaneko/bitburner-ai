@@ -13,43 +13,58 @@
       :is(button,input,textarea,select):focus-visible{outline:2px solid #9ceeab;outline-offset:2px}
       input,textarea,select{background:#101613;color:#e3e9e5;border:1px solid #45564a;border-radius:3px;padding:8px;width:100%;min-width:0}
       #launcher{position:fixed;right:20px;bottom:20px;z-index:10000;border-color:#77c58a;color:#a5f3b5;background:#0d1811;padding:9px 17px}
-      #panel{position:fixed;z-index:10001;right:16px;bottom:16px;width:min(540px,calc(100vw - 32px));height:min(800px,calc(100vh - 44px));background:#101713;border:1px solid #507059;border-radius:6px;box-shadow:0 8px 30px #0008;display:flex;flex-direction:column;overflow:hidden}
+      #panel{position:fixed;z-index:10001;right:16px;bottom:16px;width:min(980px,calc(100vw - 32px));height:min(820px,calc(100vh - 44px));background:#101713;border:1px solid #507059;border-radius:6px;box-shadow:0 8px 30px #0008;display:flex;flex-direction:column;overflow:hidden}
       #panel.fullscreen{inset:0;width:100vw;height:100vh;border-radius:0}#panel.fullscreen #messages,#panel.fullscreen footer{padding-left:clamp(16px,4vw,64px);padding-right:clamp(16px,4vw,64px)}#panel.fullscreen #settings{max-height:35%}
-      header{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid #324337} h2{font-size:17px;margin:0;white-space:nowrap} #game-status{color:#b1bcb4;font-size:12px;flex:1} header button{padding:4px 10px}
+      #workspace{display:flex;flex:1;min-width:0;min-height:0}.sidebar{width:236px;flex:0 0 236px;display:flex;flex-direction:column;gap:10px;padding:14px 12px;background:#0c1410;border-right:1px solid #324337;overflow:auto}.workspace.sidebar-collapsed .sidebar{display:none}.sidebar-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}.sidebar-heading h3{font-size:14px;margin:0;color:#d7e5da}.sidebar-new{width:100%;text-align:left;background:#173021;border-color:#52795e;color:#c5f4d0}.sidebar-label{font-size:11px;color:#aabbb0}.session-search{width:100%;padding:6px 8px}.session-list{width:100%;min-height:112px;flex:1;padding:4px;border-color:#324337;background:#101713}.session-list option{padding:7px 6px;white-space:normal}.session-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px}.session-actions button{font-size:12px;padding:5px 7px}.session-edit{display:grid;gap:6px}.session-edit-actions{display:flex;gap:6px}.session-edit-actions button{flex:1;font-size:12px;padding:5px}.sidebar #settings{border-top:1px solid #324337;padding-top:4px}.sidebar #settings summary{padding:7px 4px}.sidebar .settings-body{grid-template-columns:1fr;padding:0 2px 10px;gap:8px}.sidebar .settings-body .full{grid-column:auto}.sidebar .actions{gap:6px}.sidebar .actions button{font-size:12px;padding:5px 8px}
+      .chat-main{display:flex;flex:1;flex-direction:column;min-width:0;min-height:0}.chat-header{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid #324337}.chat-header h2{font-size:16px;margin:0;white-space:nowrap}.chat-header #game-status{color:#b1bcb4;font-size:12px;flex:1}.chat-header button{padding:5px 9px;white-space:nowrap}#sidebar-toggle{padding:5px 9px}
       .toolbar{display:flex;gap:8px;align-items:center;padding:10px 14px;border-bottom:1px solid #2a3a2f}.toolbar select{flex:1;min-width:100px}.toolbar button{white-space:nowrap}.round-control{display:flex;align-items:center;gap:5px;white-space:nowrap}.round-control input{width:68px;padding:5px}
       .context-row{display:flex;align-items:center;gap:9px;padding:8px 14px;border-bottom:1px solid #2a3a2f}.context-track{height:8px;flex:1;min-width:36px;border-radius:5px;background:#27342c;overflow:hidden}.context-track span{display:block;height:100%;width:0;background:#79cf8e;transition:width .2s}.context-track.over span{background:#e9a45d}.context-label{white-space:nowrap;font-size:11px;color:#b4c4b8}.context-row button{white-space:nowrap;padding:5px 9px;font-size:12px}
-      .sessions{display:flex;gap:6px;align-items:center;padding:9px 14px;border-bottom:1px solid #2a3a2f}.sessions select{flex:1}.sessions button{white-space:nowrap;padding:6px 9px;font-size:12px}#session-edit{padding:8px 14px;display:flex;gap:6px}#session-edit input{flex:1}#session-edit button{white-space:nowrap}#undo-delete{font-size:12px}
-      #settings{border-bottom:1px solid #324337;max-height:48%;overflow:auto} summary{cursor:pointer;padding:9px 14px;color:#bdd2c3} summary:hover{color:#a5f3b5} .settings-body{padding:0 14px 12px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+      #settings{max-height:48%;overflow:auto} summary{cursor:pointer;padding:9px 14px;color:#bdd2c3} summary:hover{color:#a5f3b5} .settings-body{padding:0 14px 12px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
       label{display:block;color:#c2d0c6;font-size:12px} label input{display:block;margin-top:4px}.full{grid-column:1/-1}.actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.muted{font-size:12px;color:#a9b6ad;margin:0}.primary{background:#79cf8e;color:#08150d;border-color:#79cf8e;font-weight:bold}.primary:hover{background:#9fe6af}
       #config-status{font-size:12px;overflow-wrap:anywhere} #messages{flex:1;min-height:80px;overflow:auto;padding:14px;overscroll-behavior:contain}.message{margin:0 0 18px;overflow-wrap:anywhere}.role{display:block;font-size:12px;color:#a2b1a6;margin-bottom:5px}.content{white-space:pre-wrap}.user{border-bottom:1px solid #283b2e;padding-bottom:12px}.error{color:#ffb8a7}
       .markdown{white-space:normal}.markdown p{margin:0 0 .8em}.markdown :is(h1,h2,h3,h4,h5,h6){line-height:1.35;margin:1em 0 .5em;font-weight:600}.markdown h1{font-size:24px}.markdown h2{font-size:21px}.markdown h3{font-size:18px}.markdown :is(h4,h5,h6){font-size:15px}.markdown :first-child{margin-top:0}.markdown :is(ul,ol){padding-left:1.7em;margin:.5em 0 1em}.markdown li{margin:.25em 0}.markdown li>p{margin:.3em 0}.markdown blockquote{margin:.8em 0;padding:6px 14px;border-left:3px solid #62836c;color:#b7c8bd}.markdown blockquote p:last-child{margin-bottom:0}.markdown :not(pre)>code{background:#26352b;color:#c7f2d1;padding:2px 5px;border-radius:3px;font-size:.93em}.markdown a{color:#a5edb6;text-decoration:underline;text-underline-offset:3px}.markdown hr{border:0;border-top:1px solid #405448;margin:1em 0}.markdown table{border-collapse:collapse;min-width:240px;margin:.5em 0;font-size:13px}.markdown :is(th,td){border:1px solid #405448;padding:7px 10px;text-align:left}.markdown th{background:#23342a}.table-scroll{overflow:auto;max-width:100%}.markdown input[type=checkbox]{width:auto;margin-right:6px}.code-block{margin:10px 0}.code-heading{display:flex;justify-content:space-between;align-items:center;color:#b3c8b9;font-size:12px}.code-block pre{margin-top:5px}
       pre{background:#080e0a;border:1px solid #324337;padding:10px;white-space:pre;overflow:auto;max-height:330px;font-size:12px;line-height:1.5;margin:8px 0} code{font:inherit}.copy{padding:2px 9px;min-height:30px;font-size:12px}.tool{margin:7px 0;color:#aebdb3}.tool summary{padding:4px 0;font-size:12px}.tool pre{white-space:pre-wrap}
       #activity{min-height:28px;padding:3px 14px;color:#a5dcb2;font-size:12px;border-top:1px solid #2a3a2f} footer{padding:8px 14px 12px;display:grid;gap:8px} textarea{resize:vertical;min-height:76px;max-height:200px;line-height:1.5}.footer-actions{display:flex;justify-content:space-between;gap:8px;align-items:center}.footer-buttons{display:flex;gap:8px}.hint{font-size:11px;color:#a5b2a9}
-      @media(max-width:650px){#panel{right:6px;bottom:6px;width:calc(100vw - 12px);height:calc(100vh - 12px)}.settings-body{grid-template-columns:1fr}.full{grid-column:auto}.toolbar{flex-wrap:wrap}.toolbar select{flex:1 1 140px}.round-control{font-size:11px}.round-control input{width:58px}#context-label{font-size:10px}.context-row{gap:6px}#compress-context{font-size:11px;padding:5px 6px}#game-status{font-size:11px}#kill{font-size:12px;padding:6px}.hint{display:none}}
+      @media(max-width:650px){#panel{right:6px;bottom:6px;width:calc(100vw - 12px);height:calc(100vh - 12px)}.workspace{position:relative}.sidebar{position:absolute;inset:0 auto 0 0;width:min(82vw,280px);z-index:4;box-shadow:12px 0 28px #0008}.chat-main{width:100%}.chat-header{padding:10px 8px;gap:6px}.chat-header h2{font-size:14px}.chat-header button{font-size:11px;padding:5px 6px}.settings-body{grid-template-columns:1fr}.full{grid-column:auto}.toolbar{flex-wrap:wrap}.toolbar select{flex:1 1 140px}.round-control{font-size:11px}.round-control input{width:58px}#context-label{font-size:10px}.context-row{gap:6px;padding:7px 8px}#compress-context{font-size:11px;padding:5px 6px}#kill{font-size:12px;padding:6px}.hint{display:none}}
     </style>
     <button id="launcher" aria-expanded="false" aria-controls="panel">AI 助手</button>
     <section id="panel" aria-label="Bitburner AI 助手" hidden>
-      <header><h2>AI 助手</h2><span id="game-status" role="status">等待游戏加载</span><button id="fullscreen" aria-label="全屏显示 AI 助手" aria-pressed="false">全屏</button><button id="close" aria-label="收起 AI 助手">收起</button></header>
-      <div class="sessions"><select id="session-list" aria-label="选择会话"></select><button id="new-session">新建</button><button id="rename-session">重命名</button><button id="delete-session">删除</button><button id="undo-delete" hidden>撤销删除</button></div>
-      <div id="session-edit" hidden><input id="session-title" aria-label="会话名称" maxlength="80"><button id="save-title">保存名称</button><button id="cancel-title">取消</button></div>
-      <div class="toolbar"><label for="mode">模式</label><select id="mode"><option value="explain">讲解与写脚本</option><option value="auto">自动部署与运行</option></select><label class="round-control" for="round-limit">轮数<input id="round-limit" type="number" min="1" max="1000" step="1" value="200" aria-label="每轮循环上限" title="本轮模型调用上限，1–1000 次">次</label><button id="kill" title="停止本次会话中由助手启动的脚本">停止 AI 脚本</button></div>
-      <div class="context-row"><div id="context-track" class="context-track" role="meter" aria-label="当前上下文占用比例" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="context-fill"></span></div><span id="context-label" class="context-label">上下文占用估算中</span><button id="compress-context" type="button" title="用本地摘要压缩较早的对话，保留近期内容">压缩上下文</button></div>
-      <details id="settings"><summary>模型设置</summary><form class="settings-body" id="config-form">
-        <label class="full">接口地址<input id="base-url" type="url" placeholder="https://你的服务地址/v1" autocomplete="off" required></label>
-        <label>模型名称<input id="model" placeholder="填写服务商提供的模型名" autocomplete="off" required></label>
-        <label>API Key<input id="api-key" type="password" placeholder="留空沿用已保存密钥" autocomplete="off"></label>
-        <label class="full">模型上下文窗口（Token）<input id="context-window" type="number" min="4096" max="2000000" step="1024" value="128000" required></label>
-        <p class="muted full">占比按文字长度估算；接口提供 Token 用量时显示实际值。自动模式需要模型支持工具调用。</p>
-        <div class="actions full"><button class="primary" type="submit" id="save">保存配置</button><button type="button" id="test">测试连接</button><button type="button" id="clear-key">清除密钥</button><span id="config-status" role="status"></span></div>
-      </form></details>
-      <div id="messages" role="log" aria-live="polite" aria-label="对话与执行记录"></div>
-      <div id="activity" role="status">填写模型设置后即可开始。</div>
-      <footer><textarea id="prompt" aria-label="向 AI 助手发送消息" placeholder="例如：看看我的进度，教我怎么写第一个赚钱脚本。"></textarea><div class="footer-actions"><button id="clear">清空对话</button><span class="hint">Ctrl+Enter 发送 · Ctrl+Shift+A 收起/展开</span><div class="footer-buttons"><button id="stop" hidden>停止本轮</button><button id="send" class="primary">发送</button></div></div></footer>
+      <div id="workspace" class="workspace">
+        <aside class="sidebar" id="sidebar" aria-label="会话和模型设置">
+          <div class="sidebar-heading"><h3>会话</h3><button id="new-session" class="sidebar-new">＋ 新对话</button></div>
+          <label class="sidebar-label" for="session-search">最近对话</label>
+          <input id="session-search" class="session-search" type="search" placeholder="筛选会话" aria-label="筛选会话">
+          <select id="session-list" class="session-list" size="10" aria-label="会话历史"></select>
+          <div class="session-actions"><button id="rename-session">重命名</button><button id="delete-session">删除</button><button id="undo-delete" hidden>撤销删除</button></div>
+          <div id="session-edit" class="session-edit" hidden><input id="session-title" aria-label="会话名称" maxlength="80"><div class="session-edit-actions"><button id="save-title">保存名称</button><button id="cancel-title">取消</button></div></div>
+          <details id="settings"><summary>模型设置</summary><form class="settings-body" id="config-form">
+            <label>接口地址<input id="base-url" type="url" placeholder="https://你的服务地址/v1" autocomplete="off" required></label>
+            <label>模型名称<input id="model" placeholder="填写服务商提供的模型名" autocomplete="off" required></label>
+            <label>API Key<input id="api-key" type="password" placeholder="留空沿用已保存密钥" autocomplete="off"></label>
+            <label>上下文窗口（Token）<input id="context-window" type="number" min="4096" max="2000000" step="1024" value="128000" required></label>
+            <p class="muted">自动模式需要模型支持工具调用。本机模型可不填 Key。</p>
+            <div class="actions"><button class="primary" type="submit" id="save">保存配置</button><button type="button" id="test">测试连接</button><button type="button" id="clear-key">清除密钥</button><span id="config-status" role="status"></span></div>
+          </form></details>
+        </aside>
+        <main class="chat-main">
+          <header class="chat-header"><button id="sidebar-toggle" aria-label="显示或隐藏会话侧边栏" aria-expanded="true">☰</button><h2>AI 助手</h2><span id="game-status" role="status">等待游戏加载</span><button id="fullscreen" aria-label="全屏显示 AI 助手" aria-pressed="false">全屏</button><button id="close" aria-label="收起 AI 助手">收起</button></header>
+          <div class="toolbar"><label for="mode">模式</label><select id="mode"><option value="explain">讲解与写脚本</option><option value="auto">自动部署与运行</option></select><label class="round-control" for="round-limit">轮数<input id="round-limit" type="number" min="1" max="1000" step="1" value="200" aria-label="每轮循环上限" title="本轮模型调用上限，1–1000 次">次</label><button id="kill" title="停止本次会话中由助手启动的脚本">停止 AI 脚本</button></div>
+          <div class="context-row"><div id="context-track" class="context-track" role="meter" aria-label="当前上下文占用比例" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="context-fill"></span></div><span id="context-label" class="context-label">上下文占用估算中</span><button id="compress-context" type="button" title="用本地摘要压缩较早的对话，保留近期内容">压缩上下文</button></div>
+          <div id="messages" role="log" aria-live="polite" aria-label="对话与执行记录"></div>
+          <div id="activity" role="status">填写模型设置后即可开始。</div>
+          <footer><textarea id="prompt" aria-label="向 AI 助手发送消息" placeholder="例如：看看我的进度，教我怎么写第一个赚钱脚本。"></textarea><div class="footer-actions"><button id="clear">清空对话</button><span class="hint">Ctrl+Enter 发送 · Ctrl+Shift+A 收起/展开</span><div class="footer-buttons"><button id="stop" hidden>停止本轮</button><button id="send" class="primary">发送</button></div></div></footer>
+        </main>
+      </div>
     </section>`;
   document.body.append(host);
   const $ = id => shadow.getElementById(id);
   const game = window.BitburnerAI;
   const groups = [];
+  const mobileLayout = window.matchMedia?.("(max-width: 650px)").matches || false;
+  if (mobileLayout) {
+    $("workspace").classList.add("sidebar-collapsed");
+    $("sidebar-toggle").setAttribute("aria-expanded", "false");
+  }
   let busy = false;
   let controller;
   let expanded = false;
@@ -61,6 +76,11 @@
   let deletedSession;
   let contextWindow = 128000;
   let contextRefreshTimer;
+  function setSidebarVisible(visible) {
+    $("workspace").classList.toggle("sidebar-collapsed", !visible);
+    $("sidebar-toggle").setAttribute("aria-expanded", String(visible));
+    if (visible) $("session-search").focus();
+  }
   async function bridge(method, value) {
     if (!window.BitburnerAIBridge) throw new Error("请完全退出并重启游戏，以加载 AI 助手。");
     let result;
@@ -337,6 +357,7 @@
     shadow.addEventListener(type, event => event.stopPropagation());
   }
   document.addEventListener("keydown", handleShortcut);
+  $("sidebar-toggle").addEventListener("click", () => setSidebarVisible($("workspace").classList.contains("sidebar-collapsed")));
   $("round-limit").addEventListener("change", () => {
     const value = Number($("round-limit").value);
     if (!Number.isSafeInteger(value) || value < 1 || value > 1000) {
@@ -346,6 +367,10 @@
     }
     if (currentSession) { currentSession.maxRounds = value; scheduleSave(); }
     $("activity").textContent = `下一轮最多执行 ${value} 次模型循环。`;
+  });
+  $("session-search").addEventListener("input", () => {
+    const query = $("session-search").value.trim().toLocaleLowerCase();
+    for (const option of $("session-list").options) option.hidden = !option.textContent.toLocaleLowerCase().includes(query);
   });
   $("compress-context").addEventListener("click", compressCurrentContext);
   $("prompt").addEventListener("input", () => { if (currentSession) { currentSession.draft = $("prompt").value; scheduleSave(); } });

@@ -1,0 +1,15 @@
+node_modules/
+/dist/
+coverage/
+*.zip
+*.log
+.env
+.env.*
+!.env.example
+**/backup/
+**/install-state.json
+**/bitburner-ai.settings.json*
+**/bitburner-ai.sessions/
+*-test/
+*-test-v*/
+*.tmp

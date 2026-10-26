@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+# The installer verifies these exact bytes using SHA-256.
+package/** -text whitespace=cr-at-eol
+package/Bitburner-AI-Patch/third-party-licenses/** -whitespace

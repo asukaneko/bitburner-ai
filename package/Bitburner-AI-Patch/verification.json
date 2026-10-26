@@ -1,0 +1,9 @@
+{
+  "version": "1.1.0",
+  "testsPassed": 17,
+  "upgradeFrom": "1.0.0",
+  "upgradeAndRestorePassed": true,
+  "freshInstallAndRestorePassed": true,
+  "maxTaskRounds": 200,
+  "realGameWindowValidation": false
+}

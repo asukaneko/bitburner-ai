@@ -1,0 +1,99 @@
+{
+  "gameVersion": "3.0.1",
+  "source": "http://192.168.100.196:3000/asuka/bitburner-ai.git",
+  "commit": "v1.1.0",
+  "files": [
+    {
+      "path": "resources/app/bb-ai/main.cjs",
+      "sha256": "7cb4dac0d45610fa70fe02b1682d4884b5be226357833e15b11415ba9620c5a0",
+      "originalSha256": null,
+      "previousSha256": [
+        "224c0e3935bac998f99a111d72f203559ae78bc0ff3e1bcba56a9ebbf032a6d9"
+      ]
+    },
+    {
+      "path": "resources/app/bb-ai/provider.cjs",
+      "sha256": "873ecdd2459ece75d3a3c86ac35286ffb3c392f5d765746fc4fbf30ff94fe8fe",
+      "originalSha256": null,
+      "previousSha256": [
+        "873ecdd2459ece75d3a3c86ac35286ffb3c392f5d765746fc4fbf30ff94fe8fe"
+      ]
+    },
+    {
+      "path": "resources/app/bb-ai/sessions.cjs",
+      "sha256": "3646602ba85810bcdc461e98c17d56fdfa30a19e0e7b24c810f470b32e9bb2c5",
+      "originalSha256": null,
+      "previousSha256": []
+    },
+    {
+      "path": "resources/app/dist/bb-ai/agent.js",
+      "sha256": "d223f3a994f98f95d8a3e1563783db10f8403a6c05fde2bca6683c79497a0dea",
+      "originalSha256": null,
+      "previousSha256": [
+        "a2f59f025156dbd166df4785c9c941eaea4c2ad9dccb4bdd7f10576104aeadec"
+      ]
+    },
+    {
+      "path": "resources/app/dist/bb-ai/assistant.js",
+      "sha256": "29589b9712fc8a72b3a58f4174e139ba47fa8be74045749ed0f3f6a2442388ac",
+      "originalSha256": null,
+      "previousSha256": [
+        "99c3f0ebeb82976438092522af8a4da88d42c0e556c4ea1722b73faca8cabb79"
+      ]
+    },
+    {
+      "path": "resources/app/dist/bb-ai/integration.js",
+      "sha256": "2f88393ede415563d3ae9f94ebf865ef2d1aced49c24e3a5d9f5e93e266d735b",
+      "originalSha256": null,
+      "previousSha256": [
+        "2f88393ede415563d3ae9f94ebf865ef2d1aced49c24e3a5d9f5e93e266d735b"
+      ]
+    },
+    {
+      "path": "resources/app/dist/bb-ai/vendor/marked.umd.js",
+      "sha256": "b82b9334406d8bdd16b6236c08de1cb65b2a859873ca9503d9cc0b292ca3c12a",
+      "originalSha256": null,
+      "previousSha256": []
+    },
+    {
+      "path": "resources/app/dist/bb-ai/vendor/purify.min.js",
+      "sha256": "cd37898f9782adf54820c413191b5691803f0f137c799d6edcfd38523b4c2c31",
+      "originalSha256": null,
+      "previousSha256": []
+    },
+    {
+      "path": "resources/app/index.html",
+      "sha256": "082fd8ae9dc1c76d6c17f3debe34bb4791d3ca3f6676108fdf637ac45d50d41f",
+      "originalSha256": "d96c153f1d22e7620a0e3a57710288831116bf6d13c42f08cc492f1d689d2ac4",
+      "previousSha256": [
+        "47038a7d570d71cdb370272f65499962d3ba953f50d4c3e234d381bfcfb9f874"
+      ]
+    },
+    {
+      "path": "resources/app/main.js",
+      "sha256": "57eb7bc3e1f8d315953158c8d78bf4ad7b1d34a458bf433c599418b881f901ff",
+      "originalSha256": "685b6d681276458e6c51e45c6c618ab09336334c5f66a955faba52f5b7609f9f",
+      "previousSha256": [
+        "57eb7bc3e1f8d315953158c8d78bf4ad7b1d34a458bf433c599418b881f901ff"
+      ]
+    },
+    {
+      "path": "resources/app/preload.js",
+      "sha256": "8140e79568f27cfb920f5ce785755e666cbed9d220fedbb0f5113d092266da7e",
+      "originalSha256": "fc671020aeabb57d2186449a540dec0ec67f857325f850f45491006ab10dd9e6",
+      "previousSha256": [
+        "cba11bdf4e7cc0843fc1f36e0cbaf9019ba0d4d742fc1355c68263e4328c0623"
+      ]
+    }
+  ],
+  "guardFiles": [
+    {
+      "path": "resources/app/dist/main.bundle.js",
+      "sha256": "3aae0bc052c7061287dda32bec26019738c288e3a21a676c69c90cfa2774fb1e"
+    }
+  ],
+  "dependencies": {
+    "marked": "18.1.1",
+    "dompurify": "3.4.17"
+  }
+}

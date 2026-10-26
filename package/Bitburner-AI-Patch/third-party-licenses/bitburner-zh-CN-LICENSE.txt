@@ -1,0 +1,9 @@
+The translation texts, dictionaries and installer scripts in this repository
+("Bitburner Simplified Chinese Patch") are released under CC BY-NC 4.0:
+  https://creativecommons.org/licenses/by-nc/4.0/
+
+Bitburner itself is licensed under MIT, Copyright (c) the Bitburner contributors:
+  https://github.com/bitburner-official/bitburner-src/blob/main/LICENSE.md
+Files under payload/mainproc/ are modified versions of Bitburner's MIT-licensed
+Electron wrapper files and remain covered by the MIT license terms.
+This patch is unofficial and not affiliated with the Bitburner project.

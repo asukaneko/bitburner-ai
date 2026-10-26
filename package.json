@@ -1,0 +1,23 @@
+{
+  "name": "bitburner-local-ai-assistant",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-package.cjs",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "dependencies": {
+    "dompurify": "^3.4.17",
+    "marked": "^18.1.1"
+  },
+  "engines": {
+    "node": "^22.12.0 || >=24.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.100.196:3000/asuka/bitburner-ai.git"
+  },
+  "devDependencies": {
+    "jsdom": "27.0.1"
+  }
+}

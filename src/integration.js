@@ -65,9 +65,7 @@
     if (result.error) throw new Error(result.error);
     return result.result;
   }
-  const writeTools = new Set(["write_script", "run_script", "stop_script"]);
-  async function execute(name, args = {}, auto = false) {
-    if (writeTools.has(name) && !auto) throw new Error("请切换到“自动部署与运行”模式后执行。");
+  async function execute(name, args = {}) {
     const game = connect();
     const home = game.player.getHomeComputer();
     if (name === "get_state") return {
@@ -163,5 +161,5 @@
     tool("run_script", "在 home 运行 ai/ 下的脚本，使用游戏正常的权限和 RAM 检查。", { filename: str("例如 ai/hack.js"), threads: { type: "integer", minimum: 1 }, args: { type: "array", items: { anyOf: [{ type: "string" }, { type: "number" }, { type: "boolean" }] } } }, ["filename"]),
     tool("stop_script", "停止当前会话中由 AI 助手启动的一个脚本。", { pid: { type: "integer" } }, ["pid"]),
   ];
-  window.BitburnerAI = Object.freeze({ execute, tools: auto => tools.filter(item => auto || !writeTools.has(item.function.name)), ready: () => { try { connect(); return true; } catch { return false; } } });
+  window.BitburnerAI = Object.freeze({ execute, tools: () => tools, ready: () => { try { connect(); return true; } catch { return false; } } });
 })();

@@ -17,7 +17,7 @@
       #panel.fullscreen{inset:0;width:100vw;height:100vh;border-radius:0}#panel.fullscreen #messages,#panel.fullscreen footer{padding-left:clamp(16px,4vw,64px);padding-right:clamp(16px,4vw,64px)}#panel.fullscreen #settings{max-height:35%}
       #workspace{display:flex;flex:1;min-width:0;min-height:0}.sidebar{width:236px;flex:0 0 236px;display:flex;flex-direction:column;gap:10px;padding:14px 12px;background:#0c1410;border-right:1px solid #324337;overflow:auto}.workspace.sidebar-collapsed .sidebar{display:none}.sidebar-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}.sidebar-heading h3{font-size:14px;margin:0;color:#d7e5da}.sidebar-new{width:100%;text-align:left;background:#173021;border-color:#52795e;color:#c5f4d0}.sidebar-label{font-size:11px;color:#aabbb0}.session-search{width:100%;padding:6px 8px}.session-list{width:100%;min-height:112px;flex:1;padding:4px;border-color:#324337;background:#101713}.session-list option{padding:7px 6px;white-space:normal}.session-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px}.session-actions button{font-size:12px;padding:5px 7px}.session-edit{display:grid;gap:6px}.session-edit-actions{display:flex;gap:6px}.session-edit-actions button{flex:1;font-size:12px;padding:5px}.sidebar #settings{border-top:1px solid #324337;padding-top:4px}.sidebar #settings summary{padding:7px 4px}.sidebar .settings-body{grid-template-columns:1fr;padding:0 2px 10px;gap:8px}.sidebar .settings-body .full{grid-column:auto}.sidebar .actions{gap:6px}.sidebar .actions button{font-size:12px;padding:5px 8px}
       .chat-main{display:flex;flex:1;flex-direction:column;min-width:0;min-height:0}.chat-header{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid #324337}.chat-header h2{font-size:16px;margin:0;white-space:nowrap}.chat-header #game-status{color:#b1bcb4;font-size:12px;flex:1}.chat-header button{padding:5px 9px;white-space:nowrap}#sidebar-toggle{padding:5px 9px}
-      .toolbar{display:flex;gap:8px;align-items:center;padding:10px 14px;border-bottom:1px solid #2a3a2f}.toolbar select{flex:1;min-width:100px}.toolbar button{white-space:nowrap}.round-control{display:flex;align-items:center;gap:5px;white-space:nowrap}.round-control input{width:68px;padding:5px}
+      .toolbar{display:flex;gap:8px;align-items:center;padding:10px 14px;border-bottom:1px solid #2a3a2f}.toolbar button{white-space:nowrap}.round-control{display:flex;align-items:center;gap:5px;white-space:nowrap}.round-control input{width:68px;padding:5px}
       .context-row{display:flex;align-items:center;gap:9px;padding:8px 14px;border-bottom:1px solid #2a3a2f}.context-track{height:8px;flex:1;min-width:36px;border-radius:5px;background:#27342c;overflow:hidden}.context-track span{display:block;height:100%;width:0;background:#79cf8e;transition:width .2s}.context-track.over span{background:#e9a45d}.context-label{white-space:nowrap;font-size:11px;color:#b4c4b8}.context-row button{white-space:nowrap;padding:5px 9px;font-size:12px}
       #settings{max-height:48%;overflow:auto} summary{cursor:pointer;padding:9px 14px;color:#bdd2c3} summary:hover{color:#a5f3b5} .settings-body{padding:0 14px 12px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
       label{display:block;color:#c2d0c6;font-size:12px} label input{display:block;margin-top:4px}.full{grid-column:1/-1}.actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.muted{font-size:12px;color:#a9b6ad;margin:0}.primary{background:#79cf8e;color:#08150d;border-color:#79cf8e;font-weight:bold}.primary:hover{background:#9fe6af}
@@ -25,7 +25,7 @@
       .markdown{white-space:normal}.markdown p{margin:0 0 .8em}.markdown :is(h1,h2,h3,h4,h5,h6){line-height:1.35;margin:1em 0 .5em;font-weight:600}.markdown h1{font-size:24px}.markdown h2{font-size:21px}.markdown h3{font-size:18px}.markdown :is(h4,h5,h6){font-size:15px}.markdown :first-child{margin-top:0}.markdown :is(ul,ol){padding-left:1.7em;margin:.5em 0 1em}.markdown li{margin:.25em 0}.markdown li>p{margin:.3em 0}.markdown blockquote{margin:.8em 0;padding:6px 14px;border-left:3px solid #62836c;color:#b7c8bd}.markdown blockquote p:last-child{margin-bottom:0}.markdown :not(pre)>code{background:#26352b;color:#c7f2d1;padding:2px 5px;border-radius:3px;font-size:.93em}.markdown a{color:#a5edb6;text-decoration:underline;text-underline-offset:3px}.markdown hr{border:0;border-top:1px solid #405448;margin:1em 0}.markdown table{border-collapse:collapse;min-width:240px;margin:.5em 0;font-size:13px}.markdown :is(th,td){border:1px solid #405448;padding:7px 10px;text-align:left}.markdown th{background:#23342a}.table-scroll{overflow:auto;max-width:100%}.markdown input[type=checkbox]{width:auto;margin-right:6px}.code-block{margin:10px 0}.code-heading{display:flex;justify-content:space-between;align-items:center;color:#b3c8b9;font-size:12px}.code-block pre{margin-top:5px}
       pre{background:#080e0a;border:1px solid #324337;padding:10px;white-space:pre;overflow:auto;max-height:330px;font-size:12px;line-height:1.5;margin:8px 0} code{font:inherit}.copy{padding:2px 9px;min-height:30px;font-size:12px}.tool{margin:7px 0;color:#aebdb3}.tool summary{padding:4px 0;font-size:12px}.tool pre{white-space:pre-wrap}
       #activity{min-height:28px;padding:3px 14px;color:#a5dcb2;font-size:12px;border-top:1px solid #2a3a2f} footer{padding:8px 14px 12px;display:grid;gap:8px} textarea{resize:vertical;min-height:76px;max-height:200px;line-height:1.5}.footer-actions{display:flex;justify-content:space-between;gap:8px;align-items:center}.footer-buttons{display:flex;gap:8px}.hint{font-size:11px;color:#a5b2a9}
-      @media(max-width:650px){#panel{right:6px;bottom:6px;width:calc(100vw - 12px);height:calc(100vh - 12px)}.workspace{position:relative}.sidebar{position:absolute;inset:0 auto 0 0;width:min(82vw,280px);z-index:4;box-shadow:12px 0 28px #0008}.chat-main{width:100%}.chat-header{padding:10px 8px;gap:6px}.chat-header h2{font-size:14px}.chat-header button{font-size:11px;padding:5px 6px}.settings-body{grid-template-columns:1fr}.full{grid-column:auto}.toolbar{flex-wrap:wrap}.toolbar select{flex:1 1 140px}.round-control{font-size:11px}.round-control input{width:58px}#context-label{font-size:10px}.context-row{gap:6px;padding:7px 8px}#compress-context{font-size:11px;padding:5px 6px}#kill{font-size:12px;padding:6px}.hint{display:none}}
+      @media(max-width:650px){#panel{right:6px;bottom:6px;width:calc(100vw - 12px);height:calc(100vh - 12px)}.workspace{position:relative}.sidebar{position:absolute;inset:0 auto 0 0;width:min(82vw,280px);z-index:4;box-shadow:12px 0 28px #0008}.chat-main{width:100%}.chat-header{padding:10px 8px;gap:6px}.chat-header h2{font-size:14px}.chat-header button{font-size:11px;padding:5px 6px}.settings-body{grid-template-columns:1fr}.full{grid-column:auto}.toolbar{flex-wrap:wrap}.round-control{font-size:11px}.round-control input{width:58px}#context-label{font-size:10px}.context-row{gap:6px;padding:7px 8px}#compress-context{font-size:11px;padding:5px 6px}#kill{font-size:12px;padding:6px}.hint{display:none}}
     </style>
     <button id="launcher" aria-expanded="false" aria-controls="panel">AI 助手</button>
     <section id="panel" aria-label="Bitburner AI 助手" hidden>
@@ -42,13 +42,13 @@
             <label>模型名称<input id="model" placeholder="填写服务商提供的模型名" autocomplete="off" required></label>
             <label>API Key<input id="api-key" type="password" placeholder="留空沿用已保存密钥" autocomplete="off"></label>
             <label>上下文窗口（Token）<input id="context-window" type="number" min="4096" max="2000000" step="1024" value="128000" required></label>
-            <p class="muted">自动模式需要模型支持工具调用。本机模型可不填 Key。</p>
+            <p class="muted">直接操作游戏需要模型支持工具调用。本机模型可不填 Key。</p>
             <div class="actions"><button class="primary" type="submit" id="save">保存配置</button><button type="button" id="test">测试连接</button><button type="button" id="clear-key">清除密钥</button><span id="config-status" role="status"></span></div>
           </form></details>
         </aside>
         <main class="chat-main">
           <header class="chat-header"><button id="sidebar-toggle" aria-label="显示或隐藏会话侧边栏" aria-expanded="true">☰</button><h2>AI 助手</h2><span id="game-status" role="status">等待游戏加载</span><button id="fullscreen" aria-label="全屏显示 AI 助手" aria-pressed="false">全屏</button><button id="close" aria-label="收起 AI 助手">收起</button></header>
-          <div class="toolbar"><label for="mode">模式</label><select id="mode"><option value="explain">讲解与写脚本</option><option value="auto">自动部署与运行</option></select><label class="round-control" for="round-limit">轮数<input id="round-limit" type="number" min="1" max="1000" step="1" value="200" aria-label="每轮循环上限" title="本轮模型调用上限，1–1000 次">次</label><button id="kill" title="停止本次会话中由助手启动的脚本">停止 AI 脚本</button></div>
+          <div class="toolbar"><label class="round-control" for="round-limit">每轮循环<input id="round-limit" type="number" min="1" max="1000" step="1" value="200" aria-label="每轮循环上限" title="本轮模型调用上限，1–1000 次">次</label><button id="kill" title="停止本次会话中由助手启动的脚本">停止 AI 脚本</button></div>
           <div class="context-row"><div id="context-track" class="context-track" role="meter" aria-label="当前上下文占用比例" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="context-fill"></span></div><span id="context-label" class="context-label">上下文占用估算中</span><button id="compress-context" type="button" title="用本地摘要压缩较早的对话，保留近期内容">压缩上下文</button></div>
           <div id="messages" role="log" aria-live="polite" aria-label="对话与执行记录"></div>
           <div id="activity" role="status">填写模型设置后即可开始。</div>
@@ -232,7 +232,7 @@
       try {
         updateContextDisplay(window.BitburnerAIAgent.estimateContext({
           history: chatHistory(), draft: currentSession.pendingMessage || $("prompt").value,
-          auto: $("mode").value === "auto", tools: game.tools($("mode").value === "auto"), contextWindow,
+          tools: game.tools(), contextWindow,
         }));
       } catch { /* Keep the last estimate while the game is loading. */ }
     }, 100);
@@ -242,10 +242,10 @@
     switching = true; setBusy(false);
     try {
       const history = [...groups];
-      const before = window.BitburnerAIAgent.estimateContext({ history: history.flat(), tools: game.tools($("mode").value === "auto"), auto: $("mode").value === "auto", contextWindow });
+      const before = window.BitburnerAIAgent.estimateContext({ history: history.flat(), tools: game.tools(), contextWindow });
       const result = window.BitburnerAIAgent.compressHistory(history, 3, before.tokens > contextWindow * 0.72);
       if (!result.changed) { $("activity").textContent = "会话内容较短，暂时不需要压缩。"; return; }
-      const after = window.BitburnerAIAgent.estimateContext({ history: result.history.flat(), draft: $("prompt").value, tools: game.tools($("mode").value === "auto"), auto: $("mode").value === "auto", contextWindow });
+      const after = window.BitburnerAIAgent.estimateContext({ history: result.history.flat(), draft: $("prompt").value, tools: game.tools(), contextWindow });
       if (after.tokens >= before.tokens) { $("activity").textContent = "当前历史内容较短，压缩无法减少上下文。"; return; }
       groups.splice(0, groups.length, ...result.history);
       addMessage("助手", `已压缩 ${result.removedTurns} 轮较早对话，保留任务目标与近期工具结果。预计上下文从 ${formatTokens(before.tokens)} 降至 ${formatTokens(after.tokens)} Token。`);
@@ -268,7 +268,7 @@
       if (session.pendingMessage) groups.push([{ role: "user", content: session.pendingMessage }, { role: "assistant", content: note }]);
       session.pending = false; session.pendingMessage = ""; addMessage("助手", note);
     }
-    if (!session.events.length) addMessage("助手", "可以问我玩法、让你看懂脚本，或切到自动模式后直接说出游戏目标。先在“模型设置”填写接口地址和模型，再测试连接。");
+    if (!session.events.length) addMessage("助手", "你可以问我玩法、分析当前状态，或直接描述目标让我编写、部署并运行脚本。请先在“模型设置”填写接口地址和模型，再测试连接。");
     await persistNow(); await refreshSessions();
   }
   async function sessionAction(action) {
@@ -280,7 +280,7 @@
   }
   function setBusy(value) {
     busy = value;
-    for (const id of ["send", "clear", "mode", "round-limit", "save", "test", "clear-key", "context-window", "compress-context", "session-list", "new-session", "rename-session", "delete-session", "undo-delete", "save-title"]) $(id).disabled = value || switching;
+    for (const id of ["send", "clear", "round-limit", "save", "test", "clear-key", "context-window", "compress-context", "session-list", "new-session", "rename-session", "delete-session", "undo-delete", "save-title"]) $(id).disabled = value || switching;
     $("kill").disabled = switching;
     $("stop").hidden = !value;
   }
@@ -307,7 +307,6 @@
     const message = $("prompt").value.trim();
     if (!message) { $("prompt").focus(); return; }
     if (message.length > 12000) { $("activity").textContent = "消息过长，请控制在 12000 字符内。"; return; }
-    const auto = $("mode").value === "auto";
     addMessage("你", message); $("prompt").value = ""; setBusy(true); $("activity").textContent = "AI 正在处理…";
     if (currentSession.title === "新对话") currentSession.title = message.replace(/\s+/g, " ").slice(0, 28);
     currentSession.pending = true; currentSession.pendingMessage = message; currentSession.draft = "";
@@ -316,7 +315,7 @@
     try {
       await persistNow();
       const maxRounds = Number(currentSession.maxRounds) || 200;
-      const turn = await window.BitburnerAIAgent.run({ message, history: recent, auto, bridge, game, onEvent, signal: controller.signal, maxRounds, contextWindow });
+      const turn = await window.BitburnerAIAgent.run({ message, history: recent, bridge, game, onEvent, signal: controller.signal, maxRounds, contextWindow });
       groups.push(turn); $("activity").textContent = "本轮完成。";
     } catch (error) {
       groups.push([{ role: "user", content: message }, { role: "assistant", content: "本轮未完成：" + error.message }]);
@@ -395,7 +394,6 @@
   }));
   $("stop").addEventListener("click", () => { controller?.abort(); bridge("cancel").catch(() => {}); $("activity").textContent = "正在停止…"; });
   $("clear").addEventListener("click", () => { groups.length = 0; if (currentSession) currentSession.events = []; $("messages").replaceChildren(); scheduleSave(); $("activity").textContent = "当前会话已清空。"; });
-  $("mode").addEventListener("change", () => { $("activity").textContent = $("mode").value === "auto" ? "自动模式会按你的目标保存并运行游戏脚本。" : "讲解模式可以读取状态、解释玩法和生成代码。"; refreshContextDisplay(); });
   $("config-form").addEventListener("submit", async event => { event.preventDefault(); try { await saveConfig(); } catch (error) { $("config-status").textContent = error.message; } });
   $("clear-key").addEventListener("click", async () => { try { await saveConfig(true); } catch (error) { $("config-status").textContent = error.message; } });
   $("test").addEventListener("click", async () => {

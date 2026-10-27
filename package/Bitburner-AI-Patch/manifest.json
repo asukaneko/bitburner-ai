@@ -1,7 +1,7 @@
 {
   "gameVersion": "3.0.1",
   "source": "http://192.168.100.196:3000/asuka/bitburner-ai.git",
-  "commit": "v1.3.0",
+  "commit": "v1.4.0",
   "files": [
     {
       "path": "resources/app/bb-ai/main.cjs",
@@ -30,26 +30,28 @@
     },
     {
       "path": "resources/app/dist/bb-ai/agent.js",
-      "sha256": "0288c70e0da8fb3dca392496937b0ceb6b9e2cc41f5e8e62477f608188fdcc1f",
+      "sha256": "422e5e9112462ae99a68473f744d045144d7b180c8071bcdb4f30ffb3164b2d6",
       "originalSha256": null,
       "previousSha256": [
         "a2f59f025156dbd166df4785c9c941eaea4c2ad9dccb4bdd7f10576104aeadec",
-        "d223f3a994f98f95d8a3e1563783db10f8403a6c05fde2bca6683c79497a0dea"
+        "d223f3a994f98f95d8a3e1563783db10f8403a6c05fde2bca6683c79497a0dea",
+        "0288c70e0da8fb3dca392496937b0ceb6b9e2cc41f5e8e62477f608188fdcc1f"
       ]
     },
     {
       "path": "resources/app/dist/bb-ai/assistant.js",
-      "sha256": "2dc5191e323723bf5351f54ced40260d30e624bc396dabac2f9b55786419360c",
+      "sha256": "2f2e15afae051163207356ffb65a8d538c014701b3ea8a0b99535f82cdecf815",
       "originalSha256": null,
       "previousSha256": [
         "99c3f0ebeb82976438092522af8a4da88d42c0e556c4ea1722b73faca8cabb79",
         "29589b9712fc8a72b3a58f4174e139ba47fa8be74045749ed0f3f6a2442388ac",
-        "1b19eb1c1d00f7132ec5bb2512b393bf1d47c4dfeceb904eb90f567866545dd5"
+        "1b19eb1c1d00f7132ec5bb2512b393bf1d47c4dfeceb904eb90f567866545dd5",
+        "2dc5191e323723bf5351f54ced40260d30e624bc396dabac2f9b55786419360c"
       ]
     },
     {
       "path": "resources/app/dist/bb-ai/integration.js",
-      "sha256": "2f88393ede415563d3ae9f94ebf865ef2d1aced49c24e3a5d9f5e93e266d735b",
+      "sha256": "024a17a614fe676f5293da333e700373d87196dcd7fb04d34f7a2cce6fb78f6d",
       "originalSha256": null,
       "previousSha256": [
         "2f88393ede415563d3ae9f94ebf865ef2d1aced49c24e3a5d9f5e93e266d735b"
